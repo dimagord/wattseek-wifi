@@ -1,0 +1,14 @@
+{
+  "domain": "wattseek_wifi",
+  "name": "WattSeek Wi-Fi",
+  "version": "0.1.0",
+  "codeowners": ["@dimagord"],
+  "config_flow": true,
+  "dependencies": ["mqtt"],
+  "documentation": "https://github.com/dimagord/wattseek-wifi",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/dimagord/wattseek-wifi/issues",
+  "mqtt": ["/sys/+/+/thing/post"],
+  "requirements": []
+}

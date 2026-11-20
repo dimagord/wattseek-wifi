@@ -1,0 +1,107 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "WattSeek Wi-Fi",
+        "description": "Введіть ідентифікатори з теми MQTT модуля /sys/<ключ продукту>/<ID модуля>/thing/post. Зазвичай модуль знаходиться автоматично, щойно підключиться до локального брокера.",
+        "data": {
+          "product_key": "Ключ продукту",
+          "address": "ID модуля",
+          "inverter_id": "ID інвертора (необов'язково)"
+        }
+      },
+      "confirm": {
+        "title": "WattSeek Wi-Fi",
+        "description": "Додати Wi-Fi модуль WattSeek {stick_id}?"
+      }
+    },
+    "abort": {
+      "already_configured": "Цей модуль вже налаштовано.",
+      "invalid_discovery_info": "Неочікувана тема MQTT."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Налаштування WattSeek Wi-Fi",
+        "data": {
+          "update_interval": "Інтервал оновлення (секунди)",
+          "allow_writes": "Дозволити зміну налаштувань інвертора"
+        }
+      }
+    }
+  },
+  "exceptions": {},
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Стан",
+        "state": {
+          "power_on": "Увімкнення",
+          "initialization": "Ініціалізація",
+          "standby": "Очікування",
+          "grid_mode": "Від мережі",
+          "solar_mode": "Від сонця",
+          "battery_mode": "Від батареї",
+          "generator_mode": "Від генератора",
+          "fault": "Аварія",
+          "power_off": "Вимкнено",
+          "factory_mode": "Заводський режим",
+          "upgrade": "Оновлення прошивки"
+        }
+      },
+      "faults": {
+        "name": "Аварії"
+      },
+      "alarms": {
+        "name": "Попередження"
+      },
+      "charging_stage": {
+        "name": "Етап заряду",
+        "state": {
+          "not_charging": "Не заряджається",
+          "constant_voltage": "Основний заряд (CV)",
+          "float": "Підтримувальний (float)",
+          "equalize": "Вирівнювальний"
+        }
+      },
+      "response_time": {
+        "name": "Час відповіді"
+      },
+      "response_time_max": {
+        "name": "Час відповіді (макс.)"
+      },
+      "poll_duration": {
+        "name": "Тривалість опитування"
+      },
+      "write_response_time": {
+        "name": "Час відповіді на запис"
+      },
+      "last_response": {
+        "name": "Остання відповідь"
+      },
+      "request_errors": {
+        "name": "Помилки запитів"
+      },
+      "wifi_signal": {
+        "name": "Сигнал Wi-Fi"
+      },
+      "last_seen": {
+        "name": "Останнє повідомлення модуля"
+      }
+    },
+    "binary_sensor": {
+      "problem": {
+        "name": "Проблема"
+      },
+      "fan_stalled": {
+        "name": "Вентилятор зупинився"
+      }
+    },
+    "switch": {
+      "remote_power": {
+        "name": "Живлення інвертора"
+      }
+    }
+  }
+}

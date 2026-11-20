@@ -1,0 +1,107 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "WattSeek Wi-Fi",
+        "description": "Enter the ids from the stick's MQTT topic /sys/<product key>/<stick id>/thing/post. Normally the stick is discovered automatically once it connects to the local broker.",
+        "data": {
+          "product_key": "Product key",
+          "address": "Stick ID",
+          "inverter_id": "Inverter ID (optional)"
+        }
+      },
+      "confirm": {
+        "title": "WattSeek Wi-Fi",
+        "description": "Add WattSeek Wi-Fi stick {stick_id}?"
+      }
+    },
+    "abort": {
+      "already_configured": "This stick is already configured.",
+      "invalid_discovery_info": "Unexpected MQTT topic."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "WattSeek Wi-Fi options",
+        "data": {
+          "update_interval": "Update interval (seconds)",
+          "allow_writes": "Allow changing inverter settings"
+        }
+      }
+    }
+  },
+  "exceptions": {},
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "power_on": "Power on",
+          "initialization": "Initialization",
+          "standby": "Standby",
+          "grid_mode": "Grid mode",
+          "solar_mode": "Solar mode",
+          "battery_mode": "Battery mode",
+          "generator_mode": "Generator mode",
+          "fault": "Fault",
+          "power_off": "Power off",
+          "factory_mode": "Factory mode",
+          "upgrade": "Firmware upgrade"
+        }
+      },
+      "faults": {
+        "name": "Faults"
+      },
+      "alarms": {
+        "name": "Warnings"
+      },
+      "charging_stage": {
+        "name": "Charging Stage",
+        "state": {
+          "not_charging": "Not charging",
+          "constant_voltage": "Constant voltage",
+          "float": "Float",
+          "equalize": "Equalize"
+        }
+      },
+      "response_time": {
+        "name": "Response Time"
+      },
+      "response_time_max": {
+        "name": "Response Time Max"
+      },
+      "poll_duration": {
+        "name": "Poll Duration"
+      },
+      "write_response_time": {
+        "name": "Write Response Time"
+      },
+      "last_response": {
+        "name": "Last Response"
+      },
+      "request_errors": {
+        "name": "Request Errors"
+      },
+      "wifi_signal": {
+        "name": "Wi-Fi Signal"
+      },
+      "last_seen": {
+        "name": "Last Message from Stick"
+      }
+    },
+    "binary_sensor": {
+      "problem": {
+        "name": "Problem"
+      },
+      "fan_stalled": {
+        "name": "Fan Stalled"
+      }
+    },
+    "switch": {
+      "remote_power": {
+        "name": "Remote Power"
+      }
+    }
+  }
+}
